@@ -26,6 +26,7 @@ public class Simulator {
 	}
 	
 	public void earnBonus() {
+		// @BC: Loving the variable name
 		int luckyEmployee=numGen2.nextInt(6); 
 		System.out.println("Employee "+luckyEmployee+" won the bonus!"); 
 		employees[luckyEmployee].earnBonus();
@@ -35,6 +36,7 @@ public class Simulator {
 	public void passWeekAll() {
 		System.out.println("WEEK "+week+"!");
 		this.earnBonus();
+		// @BC: This for loop will work given the constraints of the design; but using a magic number in the condition here (6) could be problematic
 		for (int i=0; i<6; i++)
 		{
 			employees[i].workWeek();
